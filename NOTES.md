@@ -26,15 +26,43 @@
     <!-- 1) Create a package.json file for your application with the following command in the CLI:  -->
         ` npm init -y ` 
 
-    <!-- 2) Install express, our web-server with the following command in the CLI:  -->
+    <!-- 2) Install nodemon {https://www.npmjs.com/package/nodemon} for your application with the following command in the CLI:  -->
+        ` npm i nodemon ` 
+
+    <!-- 3) Install express, our web-server with the following command in the CLI:  -->
         ` npm install express `
 
-    <!-- 3) Startup a Web Server with Express -->
+    <!-- 4) Startup a Web Server with Express -->
 
         /* 
-            - 3a) We have to Declare a variable to reference the port we wish to host our server on
-            - 3b) We have to import the express module using the 'require' keyword **HINT: It may be a good idea to save it in a variable...**
+            - 4a) We have to Declare a variable to reference the port we wish to host our server on
+            - 4b) We have to import the express module using the 'require' keyword **HINT: It may be a good idea to save it in a variable...**
 
-            - 3c) Invoke the express server once it is imported (require)
+            - 4c) Invoke the express server once it is imported (require).  Reference the invocation in a variable called 'app'
+            - 4d) We have to tell our new server to listen on the path (port) that we specified.  We can accomplish this with the method below:
+
+                EG. 
+                    server.listen(PORT, () => {
+                        console.log('The server is up on port: ', PORT)
+                    });
+
+            - 4e) Use the above abstraction to listen for the variable you created to reference your port.
+                - The listener should output a console.log() with a message such as: " The server is up on port: ', PORT "
+
+            - 4f) We're going to write a new script in our package.json file to run in the CLI.  This command will allow us to start up our express server.  A successful start-up will output the message you typed in the previous step via nodemon in the terminal / cli that you enter it in
+
+                - 1) Navigate to package.json
+                - 2) Under "Scripts", add the following script and save your file:
+                    //TODO: Example below:
+
+                    "scripts": {
+    
+                        "start:dev": "nodemon index.js"
+                    },
+
+                - 3) Run the command 'npm run start:dev' in a new terminal / CLI.  What do you see!?
+
+        <!-- 5) Routing -->
+        
         
         */

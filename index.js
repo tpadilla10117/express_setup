@@ -8,15 +8,18 @@
     
     */
 
+    /* TODO: File imports and variable referencing: */
         const express = require('express');
 
         const app = express();
         const port = 3000;
 
+    /* TODO: Setting up basic routing with a GET request: */
         app.get('/', (req, res) => {
             res.send("Hello World!  I setup my first endpoint!")
         });
 
+    /* TODO: Using Node.js server.listen() method to connect our server to a specified port: */
         app.listen(port, () => {
             console.log(`Example app listening on port: ${3000}!!!`)
         });
