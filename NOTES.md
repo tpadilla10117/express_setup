@@ -1,8 +1,3 @@
-<!--  -->
-
-1) `npm init -y`
-
-
 <!-- Git repository and NPM Project Setup: -->
 <!-- **TODO: Assumes git already installed {https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}
  & github account already created-->
@@ -26,16 +21,20 @@
 
 
 <!-- Setting Up Express: -->
+<!-- TODO: **Assumes Node.js already installed** {https://expressjs.com/en/starter/installing.html} -->
 
-    <!-- 1) Install express, our web-server with the following command:  -->
-        npm install express
+    <!-- 1) Create a package.json file for your application with the following command in the CLI:  -->
+        ` npm init -y ` 
 
-    <!-- 2) Startup a Web Server with Express -->
+    <!-- 2) Install express, our web-server with the following command in the CLI:  -->
+        ` npm install express `
+
+    <!-- 3) Startup a Web Server with Express -->
 
         /* 
-            - 2a) We have to Declare a variable to reference the port we wish to host our server on
-            - 2b) We have to import the express module using the 'require' keyword **HINT: It may be a good idea to save it in a variable...**
+            - 3a) We have to Declare a variable to reference the port we wish to host our server on
+            - 3b) We have to import the express module using the 'require' keyword **HINT: It may be a good idea to save it in a variable...**
 
-            - 2c) Invoke the express server once it is imported (require)
+            - 3c) Invoke the express server once it is imported (require)
         
         */
