@@ -30,7 +30,17 @@
         app.get('/api', (req, res, next) => {
             console.log("A get request was made to the /api endpoint!");
             res.send({ message: 'Successfully reached the /api endpoint!'})
-        })
+        });
+
+        app.use('/table', (req, res, next) => {
+            let shoes = req.shoes;
+            let shirt = req.shirt;
+            if(shirt && shoes) {
+                next();
+            } else {
+                res.send("No shoes & shirt, no service!");
+            }
+        });
 
     /* TODO: Setting up basic routing with a GET request: */
         app.get('/', (req, res) => {

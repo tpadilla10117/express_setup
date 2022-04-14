@@ -39,6 +39,13 @@
 
     <!-- 4) Middleware -->
         - Reference: {https://expressjs.com/en/guide/writing-middleware.html#:~:text=Middleware%20functions%20are%20functions%20that,middleware%20succeeding%20the%20current%20middleware.}
+
+        - The 'server.use' method tells our server to always call this function
+        - It passes in:
+            - a 'request' (req) object built from the client's request
+            - a 'response' (res) object
+            - the 'next' function, which moves forward to the next middleware
+            
      <!-- 5) Routing -->
 
     <!-- 6) Opening for Business (server.listen() ) -->
