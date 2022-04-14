@@ -17,7 +17,7 @@
     /* TODO: Setting up basic middleware: */
         app.use(function (req, res, next) {
             console.log('<____Body Logger START___>')
-            console.log(req.body);
+            console.log(req.body); //logs undefined
             console.log("<____Body Logger END___>")
             next();
         });
