@@ -14,6 +14,24 @@
         const app = express();
         const port = 3000;
 
+    /* TODO: Setting up basic middleware: */
+        app.use(function (req, res, next) {
+            console.log('<____Body Logger START___>')
+            console.log(req.body);
+            console.log("<____Body Logger END___>")
+            next();
+        });
+
+        app.use('/api', (req, res, next) => {
+            console.log("A request was made to the /api endpoint!")
+            next();
+        });
+
+        app.get('/api', (req, res, next) => {
+            console.log("A get request was made to the /api endpoint!");
+            res.send({ message: 'Successfully reached the /api endpoint!'})
+        })
+
     /* TODO: Setting up basic routing with a GET request: */
         app.get('/', (req, res) => {
             res.send("Hello World!  I setup my first endpoint!")
